@@ -31,6 +31,15 @@ function EditMem ({mem, isOpen, onClose, handleEditMem}: IProps){
     const [image, setImage] = useState(mem.image);
     const [likes, setLikes] = useState(mem.likes);
 
+    const handleDone = () => {
+        if(name.length < 3 || name.length > 100) {
+            return alert('min length 3, max length 100')
+        } else {
+            handleEditMem({id: mem.id, name, image, likes})
+            onClose()
+        }
+    }
+
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
         <ModalContent>
@@ -46,10 +55,7 @@ function EditMem ({mem, isOpen, onClose, handleEditMem}: IProps){
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={() => {
-                    handleEditMem({id: mem.id, name, image, likes})
-                    onClose()
-                }}>
+                <Button color="primary" onPress={handleDone}>
                   Done
                 </Button>
               </ModalFooter>
