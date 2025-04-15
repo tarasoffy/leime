@@ -10,7 +10,7 @@ import {
 } from "@heroui/table";
 import {Button} from "@heroui/button";
 import { mems } from "@/mock/mems";
-import { EditMem } from "@/components/editMem";
+import EditMem from "@/components/editMem";
 import { useCallback, useState } from "react";
 
 interface IMem {

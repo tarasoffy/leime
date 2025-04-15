@@ -1,4 +1,4 @@
-import { CardMem } from "@/components/cardMem";
+import CardMem from "@/components/cardMem";
 import { mems } from "@/mock/mems";
 
 export default function ListPage() {

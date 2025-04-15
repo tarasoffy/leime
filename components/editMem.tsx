@@ -26,7 +26,7 @@ interface IProps {
     handleEditMem: (mem: IMem) => void;
 }
 
-export const EditMem = React.memo(({mem, isOpen, onClose, handleEditMem}: IProps) => {
+const EditMem = React.memo(({mem, isOpen, onClose, handleEditMem}: IProps) => {
     const [name, setName] = useState(mem.name);
     const [image, setImage] = useState(mem.image);
     const [likes, setLikes] = useState(mem.likes);
@@ -59,3 +59,5 @@ export const EditMem = React.memo(({mem, isOpen, onClose, handleEditMem}: IProps
       </Modal>
     )
 })
+
+export default EditMem
