@@ -12,7 +12,7 @@ interface IProps {
     mem: IMem
 }
 
-const CardMem = ({mem}: IProps) => {
+export default function CardMem({mem}: IProps) {
     return (
     <Card className="py-4">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
@@ -30,5 +30,3 @@ const CardMem = ({mem}: IProps) => {
     </Card>
     )
 }
-
-export default CardMem
